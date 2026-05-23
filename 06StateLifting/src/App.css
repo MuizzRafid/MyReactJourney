@@ -1,0 +1,42 @@
+.accordion {
+  max-width: 640px;
+  margin: 48px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.accordion h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.panel {
+  margin-bottom: 12px;
+  padding: 18px;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.panel h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.panel p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.panel button {
+  padding: 8px 14px;
+  border: 1px solid #0969da;
+  border-radius: 6px;
+  color: #ffffff;
+  background: #0969da;
+  cursor: pointer;
+}
+
+.panel button:hover {
+  background: #0757b8;
+}
