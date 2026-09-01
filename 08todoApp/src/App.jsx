@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useState } from 'react'
 
 const STORAGE_KEY = 'todo-flow-items'
@@ -9,13 +10,14 @@ const starterTodos = [
     completed: false,
     createdAt: Date.now(),
   },
-  // {
-  //   id: crypto.randomUUID(),
-  //   text: 'Build something small',
-  //   completed: true,
-  //   createdAt: Date.now() - 1,
-  // },
+  {
+    id: crypto.randomUUID(),
+    text: 'Build something small',
+    completed: true,
+    createdAt: Date.now() - 1,
+  },
 ]
+
 
 const filters = ['all', 'active', 'completed']
 
@@ -42,8 +44,10 @@ function App() {
   const [editingText, setEditingText] = useState('')
 
   useEffect(() => {
+    console.log('Saving todos to localStorage:', todos)
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
   }, [todos])
+  
 
   const activeCount = todos.filter((todo) => !todo.completed).length
   const completedCount = todos.length - activeCount
@@ -103,6 +107,7 @@ function App() {
     if (!trimmedText) {
       removeTodo(id)
       setEditingId(null)
+      
       return
     }
 
