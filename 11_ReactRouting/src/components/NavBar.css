@@ -1,0 +1,15 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: beige;
+  text-decoration: none;
+}
+
+NavLink {
+  text-decoration: none;
+}
+.active-link {
+  border: 2px solid blue;
+}
