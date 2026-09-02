@@ -1,0 +1,9 @@
+State Lifting in React
+
+State lifting (or lifting state up) is the practice of moving a piece of state from a child component to the closest
+common parent when multiple components need to access or control the same state. The parent becomes the owner of the state 
+and passes the current state value to its children through props. If a child needs to change the state, the parent passes 
+a callback function (such as a function that calls setState) to the child, and the child calls that function. When the parent 
+updates the state, React re-renders the parent and passes the updated value to the children. In this way, data flows downward 
+through props, while actions/events can flow upward through callback functions. State lifting helps keep related components 
+synchronized and ensures that there is a single source of truth for shared state.
