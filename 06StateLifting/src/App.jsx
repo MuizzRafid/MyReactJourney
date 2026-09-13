@@ -58,9 +58,6 @@ function App() {
           border: "2px solid black",
           backgroundColor: color,
         }}
-        onClick={(e) => {
-          handleClickOutside(e);
-        }}
       >
         <ColorSwitch handleChangeColor={handleChangeColor}></ColorSwitch>
         <br />
